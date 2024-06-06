@@ -3,80 +3,117 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portofolio</title>
+    <title>My Portfolio</title>
     <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
     <header>
-        <div class="logo-icon"></div>
-        <nav class="menu">
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#myskill">My Skills</a></li>
-                <li><a href="#message">Message</a></li>
-            </ul>
-        </nav>
-        <!-- <hr> -->
+        <div class="main-container">
+            <div class="logo">
+                <img src="img/logo.png" alt="website-logo">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#myskill">My Skills</a></li>
+                    <li><a href="#messageus">Message Us</a></li>
+                </ul>
+            </nav>
+            <div class="burger">
+                <div class="line-1"></div>
+                <div class="line-2"></div>
+                <div class="line-3"></div>
+            </div>
+        </div>
     </header>
-    <hr>
-    <main>
-        <section id="home">
-            <h1>Hi</h1>
-            <p>Selamat datang di website portofolio Lukman</p>
-            <div class="banner"></div>
-        </section>
-        <hr>
-        <section id="myskill">
-            <div>
-                <div class="html-icon"></div>
-                <p>HTML</p>
+    <section id="home">
+        <div class="home-container">
+            <div class="hero-left">
+                <h1 class="hero-name">Hi <span id="client-name"></span></h1>
+                <h3 class="pre-title">My name is</h3>
+                <h1 class="hero-name">Laili Fitra Sani <span id="owner-name">Lukman</span></h1>
+                <p>
+                    Enthusiastic front-end developer beginner with basic experience in 
+                    HTML, CSS, and JavaScript. Passionate about learning and improving 
+                    UI/UX skills. Eager to contribute to real-world projects and work in 
+                    dynamic teams.
+                </p>
             </div>
-            <div>
-                <div class="css-icon"></div>
-                <p>CSS</p>
+            <div class="hero-right">
+                <img src="img/hero.svg" alt="person-standing">
             </div>
-            <div>
-                <div class="javascript-icon"></div>
-                <p>JavaScript</p>
+        </div>
+    </section>
+    <section id="myskill">
+        <div class="myskill-container">
+            <h1 class="section-title myskill-title">My Skills</h1>
+            <div class="grid-3">
+                <div class="skill">
+                    <div class="skill-icon">
+                        <img src="img/html.png" alt="logo-html5">
+                    </div>
+                    <h4>HTML</h4>
+                    <p>
+                        HTML (HyperText Markup Language) is the standard language for 
+                        creating and structuring content on the web. It defines elements 
+                        like headings, paragraphs, and images, forming the backbone of 
+                        web pages.
+                    </p>
+                </div>
+                <div class="skill">
+                    <div class="skill-icon">
+                        <img src="img/css-3.png" alt="logo-css3">
+                    </div>
+                    <h4>CSS</h4>
+                    <p>
+                        Cascading Style Sheets (CSS) is a stylesheet language used to 
+                        describe the presentation of a document written in HTML. CSS 
+                        controls the layout, colors, fonts, and overall visual 
+                        appearance of web pages.
+                    </p>
+                </div>
+                <div class="skill">
+                    <div class="skill-icon">
+                        <img src="img/js.png" alt="logo-js">
+                    </div>
+                    <h4>JavaScript</h4>
+                    <p>
+                        JavaScript is a dynamic programming language used to create 
+                        interactive effects and enhance user experiences on web pages. 
+                        It allows developers to implement complex features such as 
+                        animations, form validations, and dynamic content updates.
+                    </p>
+                </div>
             </div>
-        </section>
-        <hr>
-        <section id="message">
-            <h3>Pesan</h3>
-            <form action="" id="message-form">
-                <table>
-                    <tr>
-                        <td><label for="name">Nama</label></td>
-                        <td><label for="name">:</label></td>
-                        <td><input type="text" name="name" id="name" required></td>
-                    </tr>
-                    <tr>
-                        <td><label for="email">E-mail</label></td>
-                        <td><label for="email">:</label></td>
-                        <td><input type="email" name="email" id="email" required></td>
-                    </tr>
-                    <tr>
-                        <td><label for="message-box">Pesan</label></td>
-                        <td><label for="message-box">:</label></td>
-                        <td><input type="text" name="message-box" id="name" required></td>
-                    </tr>
-                    <tr>
-                        <button type="submit">Kirim</button>
-                    </tr>
-                </table>
-            </form>
+        </div>
+    </section>
+    <section id="messageus">
+        <h1 class="section-title messageus-title">Message Us</h1>
+        <div class="messageus-container">
+            <div class="messageus-left">
+                <form action="" class="messageus-form">
+                    <div>
+                        <input type="text" placeholder="Name" name="name" id="name"/>
+                    </div>
+                    <div>
+                        <input type="email" placeholder="Email" name="email" id="email"/>
+                    </div>
+                    <div>
+                        <textarea name="message" id="message-box" cols="30" rows="10" placeholder="Message"></textarea>
+                    </div>
+                    <div>
+                        <button type="submit" class="btn-submit">Send Message</button>
+                    </div>
+                </form>
+            </div>
+            <div class="messageus-right" id="messages-container">
 
-            <table id="response-message">
-                <tr>
-                    <th></th>
-                </tr>
-            </table>
-        </section>
-    </main>
-    <hr>
+            </div>
+        </div>
+    </section>
     <footer>
-        Laili Lukman
+        <p>&#169; 2024 - Made by Laili Lukman</p>
     </footer>
-
+    <script src="js/script.js"></script>
 </body>
 </html>
